@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div id="big-cookie-wrapper" class="big-cookie-wrapper">
+      <div class="players-name">
+        <input placeholder="Your name" />
+      </div>
+      <div class="cookies-counter">
+        <div class="total-cookies">
+          <span id="total-cookies">0</span>
+          <span>cookies</span>
+        </div>
+        <div class="cookies-cps"><span id="total-cps"></span> cps</div>
+      </div>
+      <div class="cookie" id="cookie"></div>
+      <div class="cookie-glow"></div>
+      <div class="black-gradient"></div>
+    </div>
+    <div class="upgrades-wrapper">
+      <div class="showel-wrapper upgrade-window"></div>
+      <div class="tractor-wrapper upgrade-window"></div>
+      <div class="drill-wrapper upgrade-window"></div>
+      <div class="shuttle-wrapper upgrade-window"></div>
+    </div>
+    <div class="upgrades-market-wrapper">
+      <h3 class="upgades-title">Upgrades</h3>
+      <div id="upgrades-shop" class="upgrades-shop">
+        <div class="upgrade-item"></div>
+      </div>
+      <div class="objects-window">
+        <h3 class="objects-window-title">Buy object</h3>
+        <div id="buy-cursor" class="buy-cursor-wrapper object">
+          <div class="cursor-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Cursor</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="cursors-price" class="not-available">1</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="cursors-number">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buy-showel" class="buy-showel-wrapper object not-discovered">
+          <div class="showel-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Showel</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="showels-price" class="not-available">1000</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="showels-number">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buy-tractor" class="buy-tractor-wrapper object not-discovered">
+          <div class="tractor-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Tractor</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="tractors-price" class="not-available">11000</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="tractors-number">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buy-truck" class="buy-truck-wrapper object not-discovered">
+          <div class="truck-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Truck</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="trucks-price" class="not-available">120000</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="trucks-number">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buy-ship" class="buy-ship-wrapper object not-discovered">
+          <div class="ship-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Ship</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="ships-price" class="not-available">1300000</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="ships-number">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buy-space-ship" class="buy-space-ship-wrapper object not-discovered">
+          <div class="space-ship-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Space ship</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="space-ships-price" class="not-available">14000000</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="space-ships-number">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="buy-satellite" class="buy-satellite-wrapper object not-discovered">
+          <div class="satellite-ico object-icon"></div>
+          <div class="object-info-wrapper">
+            <div class="object-title">Satellite</div>
+            <div class="object-price">
+              <span>Cost: </span><span id="satellites-price" class="not-available">200000000</span>
+            </div>
+            <div class="object-count">
+              <span>Owned: </span><span id="satellites-number">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="black-gradient"></div>
+    </div>
+  </div>
+  <div class="version">Version: 0.002-Alpha</div>
+  <script src="game.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+@keyframes circle-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@font-face {
+  font-family: "Anton-Regular";
+  src: url(fonts/Anton-Regular.ttf);
+}
+span,
+div {
+  font-family: Anton-Regular;
+}
+.version {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #f5deb3;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.big-cookie-wrapper,
+.upgrades-wrapper,
+.upgrades-market-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  border-right: 8px solid #3f2504;
+}
+.big-cookie-wrapper,
+.upgrades-market-wrapper {
+  flex: 1;
+}
+.upgrades-wrapper {
+  overflow: scroll;
+  flex: 2;
+}
+.info {
+  padding: 10px;
+  background-color: #000000a8;
+  color: #f5deb3;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.big-cookie-wrapper {
+  position: relative;
+  background-image: url(images/upgrades-bg.jpg);
+  background-size: cover;
+}
+.players-name,
+.cookies-counter {
+  padding: 10px;
+  background-color: #000000a8;
+  color: #f5deb3;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.players-name {
+  margin-top: 20px;
+  width: 300px;
+  margin-left: calc(50% - 150px);
+  border-radius: 15px;
+}
+.players-name input {
+  color: #f5deb3;
+  padding: 0;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.cookies-counter {
+  margin-top: 20px;
+  cursor: default;
+}
+.cookies-cps {
+  font-size: 1.2rem;
+}
+.cookie {
+  position: absolute;
+  z-index: 2;
+  height: 300px;
+  width: 300px;
+  top: 220px;
+  left: calc(50% - 150px);
+  background-image: url(images/big-cookie.png);
+  background-size: cover;
+  background-position: -70px 0;
+  margin-top: 20px;
+  transition: ease-in-out 0.02s;
+  border-radius: 50%;
+}
+.cookie:hover {
+  cursor: pointer;
+  height: 295px;
+  width: 295px;
+  left: calc(50% - 147.5px);
+  top: 222.5px;
+}
+.cookie:active {
+  height: 285px;
+  width: 285px;
+  left: calc(50% - 142.5px);
+  top: 227px;
+}
+.cookie-glow {
+  position: absolute;
+  z-index: 1;
+  background-image: url(images/glowing_bg.png);
+  background-size: cover;
+  height: 350px;
+  width: 350px;
+  top: 220px;
+  left: calc(50% - 175px);
+  animation: circle-rotate 30s linear infinite;
+}
+.black-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  background: radial-gradient(circle, #ffffff00 40%, #000000 100%);
+  z-index: 0;
+}
+.upgrades-wrapper {
+  background-image: url(images/upgrades-bg.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.upgrade-window {
+  height: 200px;
+  border-bottom: 8px solid #3f2504;
+  background-color: #fff;
+  background-image: url(https://image.freepik.com/free-photo/grunge-vintage-old-paper-background_1373-431.jpg);
+  background-size: cover;
+}
+.upgrades-market-wrapper {
+  background-image: url(images/upgrades-bg.jpg);
+  background-size: cover;
+  position: relative;
+  overflow-y: visible;
+}
+.upgades-title {
+  position: relative;
+  color: #f5deb3;
+  background-color: #3f2504;
+  z-index: 1;
+  padding: 10px 3px;
+}
+.upgrades-shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  background-color: #140b03;
+  border-bottom: 10px solid #3f2504;
+  height: 83px;
+  position: relative;
+  z-index: 1;
+}
+.upgrades-shop:hover {
+  overflow-y: visible;
+  height: auto;
+}
+.upgrades-shop .upgrade-item {
+  width: 50px;
+  height: 50px;
+  margin: 14.5px;
+  border-radius: 8px;
+  border: 2px solid #f5deb3;
+  background-image: url(images/upgrades-sprite.png);
+  background-size: 120px;
+  background-position: -5px 5px;
+}
+.upgrades-shop .upgrade-item:hover {
+  cursor: pointer;
+}
+.objects-window {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+}
+.objects-window .objects-window-title {
+  color: #f5deb3;
+  background-color: #3e2504;
+  padding: 10px 3px;
+}
+.objects-window .object {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  border-bottom: 8px solid #3f2504;
+  background-image: url(https://image.freepik.com/free-photo/grunge-vintage-old-paper-background_1373-431.jpg);
+  background-size: cover;
+  user-select: none;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.objects-window .object:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 12px 0px #000000;
+}
+.objects-window .object .object-icon {
+  height: 100%;
+  width: 100px;
+  background-color: #ffffff4f;
+}
+.objects-window .object .object-info-wrapper {
+  margin-left: 5px;
+}
+.objects-window .object .object-info-wrapper .object-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2f1f02;
+}
+.objects-window .object .object-info-wrapper .object-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.objects-window .object .object-info-wrapper .object-count {
+  display: inline-block;
+}
+.available {
+  color: #008000;
+  transition: color 0.5s;
+}
+.not-available {
+  color: #ff0000;
+  transition: color 0.5s;
+}
+.not-discovered {
+  display: none !important;
+  opacity: 0;
+}
+.cps {
+  position: absolute;
+  color: wheat;
+  font-size: 78px;
+  user-select: none;
+  z-index: 1;
+  left: 40%;
+}
+.cursor-ico {
+  background-image: url("images/cursor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -8px 0;
+}
+.showel-ico {
+  background-image: url("images/showel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 12px 0;
+}
+.tractor-ico {
+  background-image: url("images/pngfuel.com.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 2px 0;
+}
+.truck-ico {
+  background-image: url("images/truck.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ship-ico {
+  background-image: url("images/ship.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.space-ship-ico {
+  background-image: url("images/space-ship.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.satellite-ico {
+  background-image: url("images/sattelite.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#upgrade1 {
+  background-image: url(images/upgrades-sprite.png);
+  background-size: 120px;
+  background-position: -5px 5px;
+}
